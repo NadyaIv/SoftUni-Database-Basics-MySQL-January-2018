@@ -1,4 +1,4 @@
---- 02. Create Tables ---
+﻿--- 02. Create Tables ---
 
 CREATE TABLE minions
 ( id INT PRIMARY KEY AUTO_INCREMENT,
