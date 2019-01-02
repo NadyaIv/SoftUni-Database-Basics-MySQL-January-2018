@@ -1,0 +1,29 @@
+--- 01. Find Book Titles ---
+
+SELECT title FROM books WHERE SUBSTRING(title,1,3)='The';
+
+--- 02. Replace Titles---
+
+UPDATE books
+SET title=REPLACE(title,'The','***')
+WHERE title LIKE 'The%';
+SELECT title FROM books 
+WHERE title LIKE '***%' ORDER BY id;
+
+
+--- 03. Sum Cost of All Books ---
+
+SELECT SUM(Round(cost,2)) FROM books;
+
+--- 04.Days Lived---
+
+SELECT CONCAT_WS(' ',first_name,last_name) AS `Full Name`,TIMESTAMPDIFF(Day,born,died) AS `Days Lived`
+FROM authors ;
+
+
+--- 05. Harry Potter Books ---
+
+SELECT title FROM books WHERE title REGEXP '.*Harry Potter.*' ORDER BY id;
+
+
+
